@@ -34,7 +34,7 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
 
     }
 
-    // return number of elements
+    // returns number of elements
     public int size() {
  
         return num;
@@ -101,7 +101,7 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
 
     }
 
-    // append element to the list
+    // appends element to the list
     public void add(Item item) {
 
         if (item == null) throw new IllegalArgumentException("null argument found!");
@@ -232,7 +232,7 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
 
     }
 
-    // returns the index of first occurence of specified element or -1 id no such element
+    // returns the index of first occurence of specified element or -1 if no such element
     public int indexOf(Item item) {
 
         if (this.num == 0) return -1;
