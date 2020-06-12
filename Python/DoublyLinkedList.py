@@ -111,7 +111,7 @@ class DoublyLinkedList:
 
         return newLL
 
-    # checks if the lsit has the specified element
+    # checks if the list has the specified element
     def contains(self, item):
         if (item == None):
             raise Exception("Illegal argument")
@@ -185,47 +185,11 @@ class DoublyLinkedList:
             current.next = current.next.next
             yield item
 
-# tests
-words = DoublyLinkedList()
-print("Is the list empty : "+ str(words.isEmpty()))
-print("LL size = " + str(words.size()))
-words.addFirst("Ace")
-words.addLast("King")
-words.addLast("Queen")
-words.addFirst("Two")
-words.addFirst("One")
-words.addLast("Jack")
-print("LL size = "+str(words.size()))
-print("Current List is : ")
-for s in words.iterate():
-    print(s)
-words.removeFirst()
-words.removeLast()
-words.removeFirst()
-words.removeFirst()
-for s in words.iterate():
-    print(s)
-print("LL size = " + str(words.size()))
-words.add(1, "Ace")
-words.add(0, "Five")
-for s in words.iterate():
-    print(s)
-print("LL size = "+str(words.size()))
-newWords = words.clone()
-for s in newWords.iterate():
-    print(s)
-newWords.clear()
-#for s in newWords.iterate():
-#    print(s)
-print(str(words.contains("Ace")))
-print(str(words.contains("Seven")))
-print(str(words.element()))
-for s in words.iterate():
-    print(s)
-print(str(words.get(3)))
-print(str(words.get(2)))
-print(str(words.getFirst()))
-print(str(words.getLast()))
-print(str(words.indexOf("Ace")))
-print(str(words.indexOf("Eight")))
-
+    # returns a python list
+    def toList(self):
+        if (self.num == 0):
+            raise Exception("List is empty")
+        out = []
+        for elem in self.iterate():
+            out.append(elem)
+        return out
