@@ -284,6 +284,7 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
         */
     }
 
+/*
     public static void main(String[] args) {
 
         // unit tests:
@@ -328,5 +329,5 @@ public class DoublyLinkedList<Item> implements Iterable<Item> {
         System.out.println(words.indexOf("Eight"));
 
     }
-
+*/
 }
